@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 1000;
+    box-sizing: border-box;
+}
+
+
+.background-image {
+    background-image: url('https://res.cloudinary.com/dbkz3bebu/image/upload/v1711559641/rf3galnnrbelbsa7xmzc.jpg');  /* to add background image*/ 
+  
+    background-size: cover;
+    background-position: center;
+    height: 500vh;
+}
+
+.scroll-wrapper { /* to make it scroll*/ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* to create Grocery list interface*/ 
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur( 10px );
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.18);
+}
+
+  .container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+  
+ h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 30px;
+   font-family: 'Indie Flower', cursive;
+   font-style:bold;
+   text-align: center;
+   color: white;
+}
+  
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.alert-message{
+    width: 100%;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+}
+
+/* to make alert message*/ 
+.alert-message.show{
+    display: block;
+    transform: scale(1);
+}
+
+.alert-message.hide{
+    display: none;
+}
+
+header .input-section {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.input-section input{
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+/* to create filter list */ 
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* to create items list*/ 
+.item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+    max-height: 54vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.item-list .toadd-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+toadd-items p{
+    margin-right: 10px;
+}
+
+.toadd-item .toadd-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+}
+
+.toadd-actions button:not(:last-child){
+    margin-right: 10px;
+}
