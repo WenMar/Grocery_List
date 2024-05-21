@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <!-- Link to CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!---  Daisy UI, for Components  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css" rel="stylesheet"       type="text/css" />
+      <!---  Tailwind CSS, for building the design structure  -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+        <!---  Boxicon, for icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+ 
+    <title>Grocery List</title>
+   </head>
+<body>
+  <!---  To add image and make it scrollable  -->
+    <div class="background-image"> 
+      <div class="scroll-wrapper">  
+      <div class="container">
+        
+            <header>
+                <h1>GROCERY LIST</h1>
+               <div class="alert-message"></div> <!---  To show the alert when user insert item  -->
+                <div class="input-section">  
+                    <input type="text" placeholder="Yummy food to Buy"
+           class="input input-bordered input-secondary w-full max-w-xs" />
+                  
+  <button class="btn btn-secondary add-task-button"> 
+    <i class="bx bx-plus bx-sm"></i> Add
+</button>
+            </div>
+        </header>                 
+                  
+          
+<div class="filter">
+  <div class="dropdown">
+  <label tabindex="0" class="btn m-1">Filter</label>
+                            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                              <li onclick="uiManager.handleFilterItems('Added to Cart')"><a>Added to Cart</a></li>
+                <li onclick="uiManager.handleFilterItems('Not Added to Cart')"><a>Not Added to Cart</a></li>
+
+
+</ul>
+</div> 
+                        
+<button class="btn btn-secondary delete-all-btn">
+                            Delete All
+                        </button>
+                    </div>
+                    
+ <table class="table w-full">
+  <thead>
+  
+    <tr>
+       <th>Items</th>
+       <th>Status</th>
+      <th>Status Checker</th>
+    </tr>
+   
+   </thead>
+                        
+   <tbody class="Item-list-body">
+    </tbody>
+   </table>
+               
+</div>
+</body>
+</html>
